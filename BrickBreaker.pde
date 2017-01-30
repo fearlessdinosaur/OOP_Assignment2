@@ -1,5 +1,6 @@
 ArrayList<Brick> bricks= new ArrayList<Brick>();
-
+Paddle player;
+Ball ball;
 int i;
 int j;
 void setup()
@@ -12,6 +13,9 @@ void setup()
       bricks.add(new Brick(i,j));
      }
   }
+  player= new Paddle();
+  ball= new Ball();
+  
 }
 void draw()
 {
@@ -20,4 +24,6 @@ void draw()
   {
     brick.display();
   }
+  player.display();
+  ball.display();
 }
