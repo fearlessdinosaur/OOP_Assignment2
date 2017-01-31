@@ -30,6 +30,7 @@ void draw()
   ball.display();
   player.move();
   ball.update();
+  ball.check();
 }
 
 void keyPressed()
