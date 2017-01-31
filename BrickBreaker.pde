@@ -22,15 +22,24 @@ void setup()
 void draw()
 {
   background(0);
-  for (Brick brick : bricks) 
+  for (i=0;i<bricks.size();i++) 
   {
-    brick.display();
+    Brick brick = bricks.get(i);
+    if(brick.alive==false)
+    {
+      bricks.remove(brick);
+    }
+    else
+    {
+      brick.display();
+    }
   }
   player.display();
   ball.display();
   player.move();
   ball.update();
-  ball.check();
+  ball.checkBrick();
+  ball.checkPad();
 }
 
 void keyPressed()

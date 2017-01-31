@@ -29,17 +29,32 @@ class Ball extends GameOb
       pos.sub(0,speed);
     }
   }
-  void check()
+  
+  void checkBrick()
   {
     for (Brick brick : bricks) 
     {
-      if(this.pos.x >= brick.pos.x&&this.pos.x<=brick.pos.x+20)
+      if((this.pos.x >= brick.pos.x&&this.pos.x<=brick.pos.x+20))
       {
         if(this.pos.y >= brick.pos.y&&this.pos.y<=brick.pos.y+10)
         {
           speed = -speed;
+          brick.alive=false;
         }
       }
     }
   }
+  
+  void checkPad()
+  {
+    if((this.pos.x >= player.pos.x&&this.pos.x<=player.pos.x+50))
+      {
+        if(this.pos.y >= player.pos.y&&this.pos.y<=player.pos.y+10)
+        {
+          speed = -speed;
+        }
+      }
+  }
+  
+  
 }
