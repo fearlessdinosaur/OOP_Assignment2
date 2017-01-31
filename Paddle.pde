@@ -29,5 +29,7 @@ class Paddle extends GameOb
   {
     pos=origin;
     ball.start=false;
+    lives--;
   }
+  
 }

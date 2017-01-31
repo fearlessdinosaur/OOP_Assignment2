@@ -4,6 +4,7 @@ Ball ball;
 Menu menu;
 int i;
 int j;
+int score;
 boolean[] keys= new boolean[1000];
 int state=0;
 void setup()
@@ -28,14 +29,21 @@ void setup()
     background(0);
     menu.run();
     menu.check();
+    menu.render();
+    menu.end();
+    
     if(state==1)
     {
+      fill(255);
+      text(score,450,480);
+      text(player.lives,0,480);
       for (i=0;i<bricks.size();i++) 
       {
         Brick brick = bricks.get(i);
         if(brick.alive==false)
         {
           bricks.remove(brick);
+          score+=10;
         }
         else
         {
