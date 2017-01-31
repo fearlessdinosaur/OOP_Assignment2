@@ -1,6 +1,5 @@
 class Brick extends GameOb
 {
-  color c;
   boolean alive;
   Brick(int x, int y)
   {

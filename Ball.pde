@@ -7,11 +7,12 @@ class Ball extends GameOb
     start=false;
     pos= new PVector(player.pos.x+25,player.pos.y-5);
     speed=2.5;
+    c=color(255,0,0);
   }
   
   void display()
   {
-    fill(255,0,0);
+    fill(c);
     ellipse(pos.x,pos.y,10,10);
   }
   void update()
@@ -53,6 +54,11 @@ class Ball extends GameOb
         {
           speed = -speed;
         }
+      }
+      
+      if(this.pos.y>height)
+      {
+        player.reset();
       }
   }
   

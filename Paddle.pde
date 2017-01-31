@@ -6,11 +6,12 @@ class Paddle extends GameOb
   {
     pos = origin;
     lives= 3;
+    c=255;
   }
   
   void display()
   {
-    fill(255);
+    fill(c);
     rect(pos.x,pos.y,50,10);
   }
   void move()
@@ -23,5 +24,10 @@ class Paddle extends GameOb
     {
       pos.add(2.5,0);
     }
+  }
+  void reset()
+  {
+    pos=origin;
+    ball.start=false;
   }
 }
