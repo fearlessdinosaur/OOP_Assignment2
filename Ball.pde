@@ -6,7 +6,7 @@ class Ball extends GameOb
   {
     start=false;
     pos= new PVector(player.pos.x+25,player.pos.y-5);
-    speed= new PVector(0,4);
+    speed= new PVector(0,1.5);
     c=color(255,0,0);
   }
   
@@ -54,7 +54,8 @@ class Ball extends GameOb
         {
           
           speed =new PVector(-speed.x,-speed.y);
-          speed.x += random(-1.5,2);
+          speed.x += random(-5,5);
+          println(speed.x,speed.y);
         }
       }
       
@@ -63,7 +64,13 @@ class Ball extends GameOb
         player.reset();
       }
   }
-
+  void checkWall()
+  {
+    if((this.pos.x >= width || this.pos.x<= 0))
+      {
+          speed =new PVector(-speed.x,speed.y);
+      }
+  }
   
   
 }

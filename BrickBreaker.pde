@@ -38,25 +38,26 @@ void setup()
       fill(255);
       text(score,450,480);
       text(player.lives,0,480);
-      for (i=0;i<bricks.size();i++) 
-      {
-        Brick brick = bricks.get(i);
-        if(brick.alive==false)
-        {
-          bricks.remove(brick);
-          score+=10;
-        }
-        else
-        {
-          brick.display();
-        }
-      }
       player.display();
       ball.display();
       player.move();
       ball.update();
       ball.checkBrick();
       ball.checkPad();
+      ball.checkWall();
+      for (i=0;i<bricks.size();i++) 
+      {
+        Brick brick = bricks.get(i);
+        if(brick.alive==true)
+        {
+         brick.display();
+        }
+        else
+        {
+          bricks.remove(brick);
+        }
+      }
+      
     }
 }
 

@@ -13,7 +13,6 @@ class Menu
      {
        case 1:
            state=1;
-           println("success");
          break;
        case 2:
          
