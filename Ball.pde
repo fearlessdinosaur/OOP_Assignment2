@@ -1,12 +1,12 @@
 class Ball extends GameOb
 {
   boolean start;
-  float speed;
+  PVector speed;
   Ball()
   {
     start=false;
     pos= new PVector(player.pos.x+25,player.pos.y-5);
-    speed=2.5;
+    speed= new PVector(0,4);
     c=color(255,0,0);
   }
   
@@ -27,7 +27,7 @@ class Ball extends GameOb
     }
     else
     {
-      pos.sub(0,speed);
+      pos.sub(speed);
     }
   }
   
@@ -39,7 +39,7 @@ class Ball extends GameOb
       {
         if(this.pos.y >= brick.pos.y&&this.pos.y<=brick.pos.y+10)
         {
-          speed = -speed;
+          speed =new PVector(-speed.x,-speed.y);
           brick.alive=false;
         }
       }
@@ -52,7 +52,9 @@ class Ball extends GameOb
       {
         if(this.pos.y >= player.pos.y&&this.pos.y<=player.pos.y+10)
         {
-          speed = -speed;
+          
+          speed =new PVector(-speed.x,-speed.y);
+          speed.x += random(-1.5,2);
         }
       }
       
@@ -61,6 +63,7 @@ class Ball extends GameOb
         player.reset();
       }
   }
+
   
   
 }

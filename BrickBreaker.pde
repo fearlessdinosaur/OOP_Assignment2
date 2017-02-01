@@ -34,6 +34,7 @@ void setup()
     
     if(state==1)
     {
+      noCursor();
       fill(255);
       text(score,450,480);
       text(player.lives,0,480);
