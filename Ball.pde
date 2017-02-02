@@ -2,13 +2,15 @@ class Ball extends GameOb
 {
   boolean start;
   PVector speed;
+  int rad;
   Ball()
   {
     start=false;
     pos= new PVector(player.pos.x+25,player.pos.y-5);
-    speed= new PVector(0,1.5);
+    speed= new PVector(0,2.5);
     speed.limit(5);
     c=color(255,0,0);
+    rad=5;
   }
   
   void display()
@@ -36,11 +38,21 @@ class Ball extends GameOb
   {
     for (Brick brick : bricks) 
     {
-      if((this.pos.x >= brick.pos.x&&this.pos.x<=brick.pos.x+20))
+      if((this.pos.x+rad >= brick.pos.x&&this.pos.x+rad<=brick.pos.x+20)||this.pos.x-rad >= brick.pos.x&&this.pos.x-rad<=brick.pos.x+20)
       {
-        if(this.pos.y >= brick.pos.y&&this.pos.y<=brick.pos.y+10)
+        if(this.pos.y-rad >= brick.pos.y&&this.pos.y-rad<=brick.pos.y+10)
         {
+          int i= (int)random(0,100);
           speed =new PVector(-speed.x,-speed.y);
+          
+          if(i>50)
+          {
+            speed.x += cos(45)+random(-0.5,0.5);
+          }
+          else
+          {
+            speed.x -= cos(45)+random(-0.5,0.5);
+          }
           brick.alive=false;
         }
       }
@@ -56,12 +68,13 @@ class Ball extends GameOb
          if(pos.x<player.pos.x+25)
          {
             speed =new PVector(speed.x,-speed.y);
-            speed.x -= cos(45);
+            speed.x -= cos(45)+random(-0.5,0.5);
+            
          }
          else
          {
             speed =new PVector(speed.x,-speed.y);
-            speed.x += cos(45);
+            speed.x += cos(45)+random(-0.5,0.5);
          }
         }
       }

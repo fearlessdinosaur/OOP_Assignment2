@@ -55,6 +55,7 @@ void setup()
         else
         {
           bricks.remove(brick);
+          score +=10;
         }
       }
       

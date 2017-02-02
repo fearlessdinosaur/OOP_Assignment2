@@ -4,7 +4,7 @@ class Brick extends GameOb
   Brick(int x, int y)
   {
     pos = new PVector(x,y);
-    c=color(random(255),random(255),random(255));
+    c=color(random(50,255),random(50,255),random(50,255));
     alive=true;
     w=20;
     h=10;
