@@ -7,6 +7,7 @@ class Ball extends GameOb
     start=false;
     pos= new PVector(player.pos.x+25,player.pos.y-5);
     speed= new PVector(0,1.5);
+    speed.limit(5);
     c=color(255,0,0);
   }
   
@@ -52,10 +53,16 @@ class Ball extends GameOb
       {
         if(this.pos.y >= player.pos.y&&this.pos.y<=player.pos.y+10)
         {
-          
-          speed =new PVector(-speed.x,-speed.y);
-          speed.x += random(-5,5);
-          println(speed.x,speed.y);
+         if(pos.x<player.pos.x+25)
+         {
+            speed =new PVector(speed.x,-speed.y);
+            speed.x -= cos(45);
+         }
+         else
+         {
+            speed =new PVector(speed.x,-speed.y);
+            speed.x += cos(45);
+         }
         }
       }
       

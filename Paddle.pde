@@ -2,17 +2,20 @@ class Paddle extends GameOb
 {
   PVector origin= new PVector(200,450);
   int lives;
+  
    Paddle()
   {
     pos = origin;
     lives= 3;
     c=255;
+    w=50;
+    h=10;
   }
   
   void display()
   {
     fill(c);
-    rect(pos.x,pos.y,50,10);
+    rect(pos.x,pos.y,w,h);
   }
   void move()
   {
