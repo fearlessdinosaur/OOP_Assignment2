@@ -38,7 +38,7 @@ class Ball extends GameOb
   {
     for (Brick brick : bricks) 
     {
-      if((this.pos.x+rad >= brick.pos.x&&this.pos.x+rad<=brick.pos.x+20)||this.pos.x-rad >= brick.pos.x&&this.pos.x-rad<=brick.pos.x+20)
+      if((this.pos.x+rad >= brick.pos.x&&this.pos.x+rad<=brick.pos.x+30)||this.pos.x-rad >= brick.pos.x&&this.pos.x-rad<=brick.pos.x+30)
       {
         if((this.pos.y-rad >= brick.pos.y&&this.pos.y-rad<=brick.pos.y+10)||(this.pos.y+rad >= brick.pos.y&&this.pos.y+rad<=brick.pos.y+10))
         {

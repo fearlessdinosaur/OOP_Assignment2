@@ -10,12 +10,11 @@ int state=0;
 void setup()
 {
   size(500,500);
-  //
-  //noStroke();
+  noStroke();
 
-     for(i=10;i<width-10;i=i+22)
+     for(i=5;i<width-30;i=i+35)
     {
-      for(j=10;j<height/3;j=j+22)
+      for(j=10;j<height/3;j=j+15)
        {  
         bricks.add(new Brick(i,j));
        }
@@ -36,7 +35,6 @@ void setup()
     
     if(state==1)
     {
-      stroke(255);
       line(0,475,500,475);
       noCursor();
       fill(255);
@@ -61,7 +59,9 @@ void setup()
           score +=10;
         }
       }
-      fill(255);
+    fill(0);
+    rect(0,480,500,20);
+    fill(255);
     text("Score:"+score,400,498);
     text(player.lives,0,498);
     }

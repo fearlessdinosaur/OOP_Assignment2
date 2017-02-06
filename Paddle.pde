@@ -21,11 +21,11 @@ class Paddle extends GameOb
   {
     if(checkKey('a'))
     {
-      pos.sub(2.5,0);
+      pos.sub(3,0);
     }
     if(checkKey('d'))
     {
-      pos.add(2.5,0);
+      pos.add(3,0);
     }
   }
   void reset()
