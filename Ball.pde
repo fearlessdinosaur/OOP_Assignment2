@@ -40,7 +40,7 @@ class Ball extends GameOb
     {
       if((this.pos.x+rad >= brick.pos.x&&this.pos.x+rad<=brick.pos.x+20)||this.pos.x-rad >= brick.pos.x&&this.pos.x-rad<=brick.pos.x+20)
       {
-        if(this.pos.y-rad >= brick.pos.y&&this.pos.y-rad<=brick.pos.y+10)
+        if((this.pos.y-rad >= brick.pos.y&&this.pos.y-rad<=brick.pos.y+10)||(this.pos.y+rad >= brick.pos.y&&this.pos.y+rad<=brick.pos.y+10))
         {
           int i= (int)random(0,100);
           speed =new PVector(-speed.x,-speed.y);

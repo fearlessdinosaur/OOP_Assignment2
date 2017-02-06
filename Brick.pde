@@ -13,6 +13,7 @@ class Brick extends GameOb
   void display()
   {
     fill(c);
+    stroke(c-100);
     rect(pos.x,pos.y,w,h,2.5);
   }
 }

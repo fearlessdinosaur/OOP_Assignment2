@@ -36,11 +36,11 @@ void setup()
     
     if(state==1)
     {
+      stroke(255);
+      line(0,475,500,475);
       noCursor();
       fill(255);
       textSize(20);
-      text("Score:"+score,400,480);
-      text(player.lives,0,480);
       player.display();
       ball.display();
       player.move();
@@ -61,8 +61,11 @@ void setup()
           score +=10;
         }
       }
-      
+      fill(255);
+    text("Score:"+score,400,498);
+    text(player.lives,0,498);
     }
+
 }
 
 void keyPressed()
