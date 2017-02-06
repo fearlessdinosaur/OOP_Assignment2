@@ -9,13 +9,13 @@ class Paddle extends GameOb
     lives= 3;
     c=255;
     w=50;
-    h=10;
+    h=12;
   }
   
   void display()
   {
     fill(c);
-    rect(pos.x,pos.y,w,h);
+    rect(pos.x,pos.y,w,h,2.5);
   }
   void move()
   {

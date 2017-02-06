@@ -2,6 +2,7 @@ class Menu
 {
   int val;
   PVector origin;
+  int count;
    Menu()
    {
      val=0;
@@ -44,11 +45,19 @@ class Menu
      {
        textSize(40);
        
-
-         for(i=0;i<50;i++)
+         if(count<1000)
          {
-           fill(random(255),random(255),random(255));
-           rect(random(0,500),random(0,500),20,10);
+           for(i=0;i<50;i++)
+           {
+             fill(random(255),random(255),random(255));
+             rect(random(0,500),random(0,500),20,10);
+             
+           }
+           count++;
+         }
+         else
+         {
+           count=0;
          }
        
        fill(255);

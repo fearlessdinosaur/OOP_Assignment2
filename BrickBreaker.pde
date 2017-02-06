@@ -10,7 +10,8 @@ int state=0;
 void setup()
 {
   size(500,500);
-  noStroke();
+  //
+  //noStroke();
 
      for(i=10;i<width-10;i=i+22)
     {
@@ -19,6 +20,7 @@ void setup()
         bricks.add(new Brick(i,j));
        }
     }
+    
     player= new Paddle();
     ball= new Ball();
     menu=new Menu();
@@ -36,7 +38,8 @@ void setup()
     {
       noCursor();
       fill(255);
-      text(score,450,480);
+      textSize(20);
+      text("Score:"+score,400,480);
       text(player.lives,0,480);
       player.display();
       ball.display();
