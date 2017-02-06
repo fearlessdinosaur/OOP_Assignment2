@@ -90,6 +90,10 @@ class Ball extends GameOb
       {
           speed =new PVector(-speed.x,speed.y);
       }
+    if(this.pos.y<=0)
+    {
+      speed =new PVector(speed.x,-speed.y);
+    }
   }
   
   
