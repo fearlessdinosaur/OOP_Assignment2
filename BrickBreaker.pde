@@ -1,7 +1,9 @@
+
 ArrayList<Brick> bricks= new ArrayList<Brick>();
 Paddle player;
 Ball ball;
 Menu menu;
+Resize resize;
 int i;
 int j;
 int score;
@@ -17,12 +19,14 @@ void setup()
       for(j=10;j<height/3;j=j+25)
        {  
         bricks.add(new Brick(i,j));
+        
        }
     }
     
     player= new Paddle();
     ball= new Ball();
     menu=new Menu();
+    resize=new Resize(player);
     
   }
   void draw()
@@ -57,6 +61,13 @@ void setup()
         {
           bricks.remove(brick);
           score +=10;
+          if(brick.powered==true)
+          {
+            if(brick.power==1)
+            {
+              resize.affect();
+            }
+          }
         }
       }
     fill(0);

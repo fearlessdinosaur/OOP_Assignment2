@@ -11,6 +11,8 @@ class Ball extends GameOb
     speed.limit(5);
     c=color(255,0,0);
     rad=15;
+    
+    
   }
   
   void display()
