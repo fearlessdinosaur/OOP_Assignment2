@@ -80,6 +80,7 @@ class Menu
          player.lives=3;
          score=0;
          resize.reverse();
+         mult.reverse();
          for(i=0;i<bricks.size();i++)
          {
            bricks.remove(bricks.get(i));

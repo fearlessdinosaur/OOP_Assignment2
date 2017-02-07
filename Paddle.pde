@@ -1,7 +1,8 @@
 class Paddle extends GameOb
 {
   int lives;
-  boolean powered;
+  boolean grown;
+  boolean multiplied;
    Paddle()
   {
     lives= 3;
@@ -15,6 +16,14 @@ class Paddle extends GameOb
   {
     fill(c);
     rect(pos.x,pos.y,w,h,2.5);
+    if(grown==true)
+    {
+      resize.time();
+    }
+    if(multiplied==true)
+    {
+      mult.time();
+    }
   }
   void move()
   {

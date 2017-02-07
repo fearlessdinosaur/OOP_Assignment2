@@ -2,19 +2,20 @@
 class Resize extends Powerup
 {
   Paddle affected;
-  
+  int counter;
   Resize(Paddle pad)
   {
     this.affected=pad;
-    value=10;
+    value=40;
+    counter=0;
   }
   void affect()
   {
-    if(affected.powered==false)
+    if(affected.grown==false)
     {
       affected.w += value/2;
       affected.pos.x -=value/2;
-      affected.powered=true;
+      affected.grown=true;
     }
     
   }
@@ -22,6 +23,20 @@ class Resize extends Powerup
   {
       affected.w -= value/2;
       affected.pos.x +=value/2;
-      affected.powered=false;
+      affected.grown=false;
+  }
+  
+  void time()
+  {
+    if(counter<1000)
+    {
+      counter++;
+    }
+    else
+    {
+      grow.c=color(50,50,50);
+      reverse();
+      
+    }
   }
 }
