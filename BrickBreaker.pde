@@ -9,7 +9,7 @@ boolean[] keys= new boolean[1000];
 int state=0;
 void setup()
 {
-  size(1000,800);
+  size(1000,700);
   noStroke();
 
      for(i=7;i<=width-((width/12));i=i+((width/12)+7))

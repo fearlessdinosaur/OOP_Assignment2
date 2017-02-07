@@ -47,11 +47,11 @@ class Ball extends GameOb
           
           if(i>50)
           {
-            speed.x += cos(45)+random(-0.5,0.5);
+            speed.x += cos(45)+random(-1.5,1.5);
           }
           else
           {
-            speed.x -= cos(45)+random(-0.5,0.5);
+            speed.x -= cos(45)+random(-1.5,1.5);
           }
           brick.alive=false;
         }

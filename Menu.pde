@@ -6,7 +6,7 @@ class Menu
    Menu()
    {
      val=0;
-     origin=new PVector(150,200);
+     origin=new PVector(width/4,height/2-100);
    }
    void run()
    {
@@ -43,14 +43,14 @@ class Menu
    {
      if(val==0)
      {
-       textSize(40);
+       textSize(80);
        
          if(count<1000)
          {
            for(i=0;i<50;i++)
            {
              fill(random(255),random(255),random(255));
-             rect(random(0,500),random(0,500),20,10);
+             rect(random(0,1000),random(0,800),20,10);
              
            }
            count++;
@@ -62,8 +62,8 @@ class Menu
        
        fill(255);
        text("1.Play Game",origin.x,origin.y);
-       text("2.How To",origin.x,origin.y+50);
-       text("3.highScore",origin.x,origin.y+100);
+       text("2.How To",origin.x,origin.y+100);
+       text("3.highScore",origin.x,origin.y+200);
        
      }
    }
