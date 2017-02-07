@@ -6,8 +6,8 @@ class Brick extends GameOb
     pos = new PVector(x,y);
     c=color(random(50,255),random(50,255),random(50,255));
     alive=true;
-    w=30;
-    h=10;
+    w=width/12;
+    h=20;
   }
   
   void display()

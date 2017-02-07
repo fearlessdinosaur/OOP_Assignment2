@@ -1,15 +1,14 @@
 class Paddle extends GameOb
 {
-  PVector origin= new PVector(200,450);
   int lives;
   
    Paddle()
   {
-    pos = origin;
     lives= 3;
     c=255;
-    w=50;
-    h=12;
+    w=76;
+    h=15;
+    pos =new PVector((width/2)-(w),height-100);
   }
   
   void display()
@@ -21,16 +20,16 @@ class Paddle extends GameOb
   {
     if(checkKey('a'))
     {
-      pos.sub(3,0);
+      pos.sub(4,0);
     }
     if(checkKey('d'))
     {
-      pos.add(3,0);
+      pos.add(4,0);
     }
   }
   void reset()
   {
-    pos=origin;
+
     ball.start=false;
     lives--;
     ball.speed.x=0;

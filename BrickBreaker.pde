@@ -9,12 +9,12 @@ boolean[] keys= new boolean[1000];
 int state=0;
 void setup()
 {
-  size(500,500);
+  size(1000,800);
   noStroke();
 
-     for(i=5;i<width-30;i=i+35)
+     for(i=7;i<=width-((width/12));i=i+((width/12)+7))
     {
-      for(j=10;j<height/3;j=j+15)
+      for(j=10;j<height/3;j=j+25)
        {  
         bricks.add(new Brick(i,j));
        }
@@ -60,10 +60,9 @@ void setup()
         }
       }
     fill(0);
-    rect(0,480,500,20);
     fill(255);
-    text("Score:"+score,400,498);
-    text(player.lives,0,498);
+    text("Score:"+score,width-100,height-5);
+    text("lives:"+player.lives,10,height-5);
     }
 
 }
