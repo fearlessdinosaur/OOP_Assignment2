@@ -4,6 +4,8 @@ Paddle player;
 Ball ball;
 Menu menu;
 Resize resize;
+Mult mult;
+int multiplier;
 int i;
 int j;
 int score;
@@ -27,6 +29,7 @@ void setup()
     ball= new Ball();
     menu=new Menu();
     resize=new Resize(player);
+    mult=new Mult();
     
   }
   void draw()
@@ -69,7 +72,14 @@ void setup()
               resize.affect();
               
             }
+            if(brick.power==2)
+            {
+              mult.affect();
+            }
+            
           }
+          
+          score +=10*multiplier;
         }
       }
     fill(0);
