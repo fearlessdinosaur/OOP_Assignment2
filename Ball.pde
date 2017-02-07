@@ -8,7 +8,7 @@ class Ball extends GameOb
     start=false;
     pos= new PVector(player.pos.x+25,player.pos.y-5);
     speed= new PVector(0,4);
-    speed.limit(5);
+
     c=color(255,0,0);
     rad=15;
     
@@ -49,11 +49,11 @@ class Ball extends GameOb
           
           if(i>50)
           {
-            speed.x += cos(45)+random(-1.5,1.5);
+            speed.x += cos(45)+random(-1,1);
           }
           else
           {
-            speed.x -= cos(45)+random(-1.5,1.5);
+            speed.x -= cos(45)+random(-1,1);
           }
           brick.alive=false;
         }

@@ -5,7 +5,9 @@ Ball ball;
 Menu menu;
 Resize resize;
 Mult mult;
-int multiplier;
+Widget multi;
+Widget grow;
+int multiplier=0;
 int i;
 int j;
 int score;
@@ -31,6 +33,9 @@ void setup()
     resize=new Resize(player);
     mult=new Mult();
     
+    multi=new Widget(350,height-5,"multiplier");
+    grow=new Widget(500,height-5,"Boost");
+    
   }
   void draw()
   {
@@ -42,6 +47,7 @@ void setup()
     
     if(state==1)
     {
+      
       line(0,475,500,475);
       noCursor();
       fill(255);
@@ -53,6 +59,8 @@ void setup()
       ball.checkBrick();
       ball.checkPad();
       ball.checkWall();
+      multi.render();
+      grow.render();
       for (i=0;i<bricks.size();i++) 
       {
         Brick brick = bricks.get(i);
@@ -68,12 +76,13 @@ void setup()
           {
             if(brick.power==1)
             {
-              
+              grow.c=color(50,200,250);
               resize.affect();
               
             }
             if(brick.power==2)
             {
+              multi.c=color(50,200,250);
               mult.affect();
             }
             
@@ -86,6 +95,7 @@ void setup()
     fill(255);
     text("Score:"+score,width-100,height-5);
     text("lives:"+player.lives,10,height-5);
+    
     }
 
 }
