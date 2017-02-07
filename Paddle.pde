@@ -1,7 +1,7 @@
 class Paddle extends GameOb
 {
   int lives;
-  
+  boolean powered;
    Paddle()
   {
     lives= 3;

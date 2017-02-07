@@ -65,7 +65,9 @@ void setup()
           {
             if(brick.power==1)
             {
+              
               resize.affect();
+              
             }
           }
         }
