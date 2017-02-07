@@ -69,10 +69,36 @@ class Menu
    }
    void end()
    {
+     textSize(80);
      if(player.lives==0)
      {
        state=0;
        text(score,origin.x,origin.y);
+       if(frameCount%180==0)
+       {
+         val=0;
+         player.lives=3;
+         score=0;
+         resize.reverse();
+         for(i=0;i<bricks.size();i++)
+         {
+           bricks.remove(bricks.get(i));
+         }
+         
+        for(i=7;i<=width-((width/12));i=i+((width/12)+7))
+        {
+          for(j=10;j<height/3;j=j+25)
+           {  
+            bricks.add(new Brick(i,j));
+            
+           }
+        }
+       }
+     }
+     if(bricks.size()<=0)
+     {
+       state=0;
+       text("WINNER",origin.x,origin.y);
        if(frameCount%180==0)
        {
          val=0;

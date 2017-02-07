@@ -18,4 +18,10 @@ class Resize extends Powerup
     }
     
   }
+  void reverse()
+  {
+      affected.w -= value/2;
+      affected.pos.x +=value/2;
+      affected.powered=false;
+  }
 }

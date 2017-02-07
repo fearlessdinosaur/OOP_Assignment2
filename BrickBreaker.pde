@@ -59,6 +59,8 @@ void setup()
       ball.checkBrick();
       ball.checkPad();
       ball.checkWall();
+      fill(0);
+      rect(0,height-50,width,50);
       multi.render();
       grow.render();
       for (i=0;i<bricks.size();i++) 
@@ -91,7 +93,6 @@ void setup()
           score +=10*multiplier;
         }
       }
-    fill(0);
     fill(255);
     text("Score:"+score,width-100,height-5);
     text("lives:"+player.lives,10,height-5);
