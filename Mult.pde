@@ -1,5 +1,6 @@
 class Mult
 {
+  //multiplier powerup
   int value;
   PVector Pos;
   int counter;
@@ -7,6 +8,7 @@ class Mult
   {
     
   }
+  //applies power up effect
   void affect()
   {
      if(player.multiplied==false)
@@ -15,13 +17,13 @@ class Mult
       player.multiplied=true;
     }
   }
-  
+  //reverses power up effect
   void reverse()
   {
        multiplier=2;
        player.multiplied=false;
   }
-  
+    // timer for power up
     void time()
   {
     if(counter<1000)
