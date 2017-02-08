@@ -3,13 +3,15 @@ class Resize extends Powerup
 {
   Paddle affected;
   int counter;
+  
   Resize(Paddle pad)
   {
     this.affected=pad;
     value=40;
     counter=0;
   }
-  void affect()
+  // applies resize 
+  void effect()
   {
     if(affected.grown==false)
     {
@@ -19,13 +21,14 @@ class Resize extends Powerup
     }
     
   }
+  //reverses resize
   void reverse()
   {
       affected.w -= value/2;
       affected.pos.x +=value/2;
       affected.grown=false;
   }
-  
+  //timer for resize
   void time()
   {
     if(counter<1000)
