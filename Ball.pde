@@ -22,10 +22,12 @@ class Ball extends GameOb
   }
   void update()
   {
+    // checks launch key
     if(checkKey(' '))
     {
       start=true;
     }
+    // makes ball follow paddle unless launched
     if(start==false)
     {
        pos= new PVector(player.pos.x+player.w/2,player.pos.y-10.5);
@@ -35,7 +37,7 @@ class Ball extends GameOb
       pos.sub(speed);
     }
   }
-  
+  // brick collision
   void checkBrick()
   {
     for (Brick brick : bricks) 
@@ -60,7 +62,7 @@ class Ball extends GameOb
       }
     }
   }
-  
+  //paddle collision
   void checkPad()
   {
     if((this.pos.x+rad>= player.pos.x&&this.pos.x+rad<=player.pos.x+player.w)||(this.pos.x-rad>= player.pos.x&&this.pos.x-rad<=player.pos.x+player.w))
@@ -86,6 +88,7 @@ class Ball extends GameOb
         player.reset();
       }
   }
+  //wall collison
   void checkWall()
   {
     if((this.pos.x >= width || this.pos.x<= 0))
