@@ -28,7 +28,7 @@ class Ball extends GameOb
     }
     if(start==false)
     {
-       pos= new PVector(player.pos.x+38,player.pos.y-10.5);
+       pos= new PVector(player.pos.x+player.w/2,player.pos.y-10.5);
     }
     else
     {
