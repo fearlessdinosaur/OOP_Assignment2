@@ -1,3 +1,11 @@
+/* 
+  Author: David Fox
+  Student Num:C15436172
+  Date(last updated):08/02/2017
+  git:"https://github.com/fearlessdinosaur/OOP_Assignment2"
+  
+*/
+
 //initialising Classes/lists
 //
 ArrayList<Brick> bricks= new ArrayList<Brick>();
