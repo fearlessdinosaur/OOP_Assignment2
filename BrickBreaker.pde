@@ -118,7 +118,7 @@ void setup()
         }
       }
     fill(255);
-    text("Score:"+score,width-100,height-5);
+    text("Score:"+score,width-125,height-5);
     text("lives:"+player.lives,10,height-5);
     
     }

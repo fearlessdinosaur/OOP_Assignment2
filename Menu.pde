@@ -7,6 +7,7 @@ class Menu
    {
      val=0;
      origin=new PVector(width/4,height/2-100);
+     count=0;
    }
    //runs menu through switch
    void run()
@@ -48,20 +49,14 @@ class Menu
      {
        textSize(80);
        
-         if(count<1000)
-         {
+
            for(i=0;i<50;i++)
            {
              fill(random(255),random(255),random(255));
              rect(random(0,1000),random(0,800),20,10);
              
            }
-           count++;
-         }
-         else
-         {
-           count=0;
-         }
+
        
        fill(255);
        text("1.Play Game",origin.x,origin.y);
@@ -119,7 +114,7 @@ class Menu
      if(count<=10000)
      {
        text("GAME OVER",width/2-200,height/2-100);
-       text("Score: "+score,width/2-150,height/2);
+       text("Score: "+score,width/2-200,height/2);
        count++;
      }
      else
