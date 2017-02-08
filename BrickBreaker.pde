@@ -1,4 +1,5 @@
-
+//initialising Classes/lists
+//
 ArrayList<Brick> bricks= new ArrayList<Brick>();
 Paddle player;
 Ball ball;
@@ -17,7 +18,7 @@ void setup()
 {
   size(1000,700);
   noStroke();
-
+    // creating bricks
      for(i=7;i<=width-((width/12));i=i+((width/12)+7))
     {
       for(j=10;j<height/3;j=j+25)
@@ -32,7 +33,8 @@ void setup()
     menu=new Menu();
     resize=new Resize(player);
     mult=new Mult();
-    
+    //
+    //setting up buttons
     multi=new Widget(350,height-5,"multiplier");
     grow=new Widget(500,height-5,"Boost");
     
@@ -44,14 +46,24 @@ void setup()
     menu.check();
     menu.render();
     menu.end();
+    // checking if gameover
+    //
     if(player.lives==0)
     {
       menu.time();
     }
+    //checks win condition
+    //
+    if(bricks.size()<=0)
+    {
+      menu.end();
+    }
+    //checks if menu is finished
     if(state==1)
     {
       
       line(0,475,500,475);
+      //removes cursor
       noCursor();
       fill(255);
       textSize(20);
@@ -66,6 +78,7 @@ void setup()
       rect(0,height-50,width,50);
       multi.render();
       grow.render();
+      //displays and checks bricks
       for (i=0;i<bricks.size();i++) 
       {
         Brick brick = bricks.get(i);
@@ -103,7 +116,7 @@ void setup()
     }
 
 }
-
+//takes input
 void keyPressed()
 {
   keys[keyCode]=true;
