@@ -73,7 +73,8 @@ class Menu
      if(player.lives==0)
      {
        state=0;
-       text(score,origin.x,origin.y);
+       text("GAME OVER",width/2-200,height/2-100);
+       text("Score: "+score,width/2-150,height/2);
        if(frameCount%180==0)
        {
          val=0;
