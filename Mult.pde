@@ -32,7 +32,7 @@ class Mult
     {
       multi.c=color(50,50,50);
       reverse();
-      
+      counter=0;
     }
   }
 }

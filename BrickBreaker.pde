@@ -44,7 +44,10 @@ void setup()
     menu.check();
     menu.render();
     menu.end();
-    
+    if(player.lives==0)
+    {
+      menu.time();
+    }
     if(state==1)
     {
       

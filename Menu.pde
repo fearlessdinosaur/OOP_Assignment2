@@ -72,11 +72,10 @@ class Menu
      textSize(80);
      if(player.lives==0)
      {
-       state=0;
-       text("GAME OVER",width/2-200,height/2-100);
-       text("Score: "+score,width/2-150,height/2);
+
        if(frameCount%180==0)
        {
+         state=0;
          val=0;
          player.lives=3;
          score=0;
@@ -108,5 +107,21 @@ class Menu
        }
      }
      
+   }
+   
+   void time()
+   {
+     state=0;
+     if(count<=10000)
+     {
+       text("GAME OVER",width/2-200,height/2-100);
+       text("Score: "+score,width/2-150,height/2);
+       count++;
+     }
+     else
+     {
+       end();
+       count=0;
+     }
    }
 }
