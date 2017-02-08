@@ -24,7 +24,7 @@ class Resize extends Powerup
   //reverses resize
   void reverse()
   {
-      affected.w -= value/2;
+      affected.w = 76;
       affected.pos.x +=value/2;
       affected.grown=false;
       grow.c=color(50,50,50);
