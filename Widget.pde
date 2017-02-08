@@ -1,5 +1,6 @@
 class Widget
 {
+  // class for widgets 
   color c;
   PVector pos;
   String name;
@@ -11,7 +12,7 @@ class Widget
     this.name=name;
     
   }
-  
+  //renders widgets with correct name
   void render()
   {
     fill(c);
