@@ -7,6 +7,7 @@ class Brick extends GameOb
   Brick(int x, int y)
   {
     pos = new PVector(x,y);
+    //randomised color
     c=color(random(50,255),random(50,255),random(50,255));
     alive=true;
     w=width/12;
@@ -14,6 +15,7 @@ class Brick extends GameOb
     check=(int)random(0,10);
     if(check>=8)
     {
+      //checks if powerup is attatched
       powered=true;
       if(check==8)
       {
