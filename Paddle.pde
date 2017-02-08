@@ -11,7 +11,7 @@ class Paddle extends GameOb
     h=15;
     pos =new PVector((width/2)-(w),height-100);
   }
-  
+  // renders paddle
   void display()
   {
     fill(c);
@@ -25,6 +25,7 @@ class Paddle extends GameOb
       mult.time();
     }
   }
+  //controls paddle
   void move()
   {
 
@@ -44,6 +45,7 @@ class Paddle extends GameOb
       }
 
   }
+  //resets paddle if ball is out of play;
   void reset()
   {
 
