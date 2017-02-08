@@ -9,7 +9,7 @@ class Mult
     
   }
   //applies power up effect
-  void affect()
+  void effect()
   {
      if(player.multiplied==false)
     {

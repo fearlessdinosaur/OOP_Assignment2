@@ -103,13 +103,13 @@ void setup()
             if(brick.power==1)
             {
               grow.c=color(50,200,250);
-              resize.affect();
+              resize.effect();
               
             }
             if(brick.power==2)
             {
               multi.c=color(50,200,250);
-              mult.affect();
+              mult.effect();
             }
             
           }
