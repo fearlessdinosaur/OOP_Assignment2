@@ -22,6 +22,7 @@ class Mult
   {
        multiplier=2;
        player.multiplied=false;
+       multi.c=color(50,50,50);
   }
     // timer for power up
     void time()
@@ -32,7 +33,6 @@ class Mult
     }
     else
     {
-      multi.c=color(50,50,50);
       reverse();
       counter=0;
     }

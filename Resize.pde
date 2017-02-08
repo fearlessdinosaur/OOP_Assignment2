@@ -27,6 +27,7 @@ class Resize extends Powerup
       affected.w -= value/2;
       affected.pos.x +=value/2;
       affected.grown=false;
+      grow.c=color(50,50,50);
   }
   //timer for resize
   void time()
@@ -37,7 +38,6 @@ class Resize extends Powerup
     }
     else
     {
-      grow.c=color(50,50,50);
       reverse();
       counter=0;
     }
