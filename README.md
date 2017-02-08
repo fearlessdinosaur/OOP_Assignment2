@@ -26,11 +26,12 @@ youtube Link: https://youtu.be/ho0GZuXXRf8
  - No sprites used : all objects rendered in game
  
 #Elements of Game
+- menu: gives the player options to select
 - blocks: the blocks are placed by a for loop and stored in an array list, their colour is randomly generated, when hit they are removed
 - Paddle: This is the player block which is used to prevent the ball from leaving the screen
 - Ball: The ball bounces around the screen and destroys the bricks,ending the game if it passes over the base line 3 times
 - Boost(powerup): increases the size of the paddle making it easier to stop the ball escaping for a short amount of time
 - multiplier(powerup): doubles score earned per block destroyed for a short amount of time 
-  
+- End Screen: Shows player score and returns to menu
 
 
