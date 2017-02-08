@@ -27,14 +27,22 @@ class Paddle extends GameOb
   }
   void move()
   {
-    if(checkKey('a'))
-    {
-      pos.sub(6,0);
-    }
-    if(checkKey('d'))
-    {
-      pos.add(6,0);
-    }
+
+      if(checkKey('a'))
+      {
+        if(pos.x>0)
+        {
+          pos.sub(6,0);
+        }
+      }
+      if(checkKey('d'))
+      {
+        if(pos.x+w<width)
+        {
+          pos.add(6,0);
+        }
+      }
+
   }
   void reset()
   {
