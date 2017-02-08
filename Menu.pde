@@ -8,6 +8,7 @@ class Menu
      val=0;
      origin=new PVector(width/4,height/2-100);
    }
+   //runs menu through switch
    void run()
    {
      switch(val)
@@ -24,6 +25,7 @@ class Menu
        
      }
    }
+   //checks values
    void check()
    {
     if(checkKey('1'))
@@ -39,6 +41,7 @@ class Menu
       val=3;
     }
    }
+   //renders basic menu
    void render()
    {
      if(val==0)
@@ -67,6 +70,7 @@ class Menu
        
      }
    }
+   // reset game for restart
    void end()
    {
      textSize(80);
@@ -108,7 +112,7 @@ class Menu
      }
      
    }
-   
+   //timer for end screen
    void time()
    {
      state=0;
